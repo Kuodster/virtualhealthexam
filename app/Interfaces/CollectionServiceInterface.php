@@ -7,7 +7,7 @@ namespace App\Interfaces;
 use App\Helpers\Sort;
 use Illuminate\Pagination\Paginator;
 
-interface CollectionRepositoryInterface
+interface CollectionServiceInterface
 {
     public function getData(): array;
 

@@ -4,7 +4,7 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 
-use App\Services\BaseCollectionService;
+use App\Interfaces\CollectionServiceInterface;
 use App\Services\OrmCollectionService;
 use App\Services\OrmCollectionWithCacheService;
 use App\Services\QueryCollectionService;
@@ -64,12 +64,12 @@ class CollectionController
 
 
     /**
-     * @param BaseCollectionService $service
+     * @param CollectionServiceInterface $service
      * @param Request $request
      *
      * @return View
      */
-    protected function renderSolutionPage(BaseCollectionService $service, Request $request): View
+    protected function renderSolutionPage(CollectionServiceInterface $service, Request $request): View
     {
         $service->setSort($request->query('sort'), $request->query('order'));
 

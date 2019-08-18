@@ -4,12 +4,12 @@ declare(strict_types=1);
 namespace App\Services;
 
 
-use App\Interfaces\CollectionRepositoryInterface;
+use App\Interfaces\CollectionServiceInterface;
 use App\Helpers\Sort;
 use Illuminate\Contracts\Pagination\Paginator as PaginatorContract;
 use Illuminate\Pagination\Paginator;
 
-abstract class BaseCollectionService implements CollectionRepositoryInterface
+abstract class BaseCollectionService implements CollectionServiceInterface
 {
     const DEFAULT_LIMIT = 50;
 

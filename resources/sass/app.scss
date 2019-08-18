@@ -1,0 +1,36 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+// Pagination
+ul.pagination {
+	padding: 15px 0;
+	display: block;
+	width: 100%;
+	text-align: center;
+
+	.page-item {
+		display: inline-block;
+
+		a, span {
+			display: inline-block;
+			padding: 5px;
+			color: #2b6cb0;
+		}
+
+		&.active {
+			a, span {
+				color: #6b46c1;
+				font-weight: bold;
+				font-size: 20px;
+			}
+		}
+
+		&.disabled {
+			a, span {
+				color: #d5d5d8;
+			}
+		}
+	}
+}
